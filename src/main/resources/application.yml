@@ -1,0 +1,32 @@
+server:
+  port: 3000
+# 数据库配置
+spring:
+  datasource:
+    dynamic:
+      # 设置默认的数据源或者数据源组,默认值即为master
+      primary: base_gis
+      # 严格匹配数据源,默认false.true未匹配到指定数据源时抛异常,false使用默认数据源
+      strict: false
+      datasource:
+        base_gis:
+          driver-class-name: org.postgresql.Driver
+          url: jdbc:postgresql://localhost:5432/base_gis
+          username: postgres
+          password: 123456
+          type: com.alibaba.druid.pool.DruidDataSource
+        track_record:
+          driver-class-name: org.postgresql.Driver
+          url: jdbc:postgresql://localhost:5432/track_record
+          username: postgres
+          password: 123456
+          type: com.alibaba.druid.pool.DruidDataSource
+
+#Mybatis配置
+mybatis-plus:
+  configuration:
+    # 打印SQL语句
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+    lazy-loading-enabled: false
+    auto-mapping-behavior: full
