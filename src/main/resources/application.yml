@@ -15,12 +15,6 @@ spring:
           username: postgres
           password: 123456
           type: com.alibaba.druid.pool.DruidDataSource
-        track_record:
-          driver-class-name: org.postgresql.Driver
-          url: jdbc:postgresql://localhost:5432/track_record
-          username: postgres
-          password: 123456
-          type: com.alibaba.druid.pool.DruidDataSource
 
 #Mybatis配置
 mybatis-plus:
@@ -29,4 +23,5 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     map-underscore-to-camel-case: true
     lazy-loading-enabled: false
+    # 自动映射resultMap
     auto-mapping-behavior: full
