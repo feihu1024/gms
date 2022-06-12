@@ -10,4 +10,12 @@ import java.util.List;
 @SpringBootTest
 class GmsApplicationTests {
 
+    @Test
+    void parseIntTest() {
+        String y= "234.mvt";
+        String test = y.replaceAll("[^0-9]", "");
+
+        Integer tileY = Integer.parseInt(test);
+        System.out.println(test+"----------->>"+tileY);
+    }
 }

@@ -18,5 +18,4 @@ public class VectorTile implements Serializable {
 
     @TableField("tile")
     private byte[] tile;
-
 }
